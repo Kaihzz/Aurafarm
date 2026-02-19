@@ -1,2 +1,1 @@
-# Aurafarm
-O proprietário desse repositório é louco.
+leia isso pois é muito importante.
