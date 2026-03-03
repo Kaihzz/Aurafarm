@@ -1,13 +1,4 @@
-import java.util.Scanner;
-public class alg {
-public static void main(String[] args) {
-    Scanner sc = new Scanner(System.in);//inicia Scanner
-    byte oP = 0; //opção
-    double lD1 = 0; // lado 1
-    double lD2 = 0; // lado 2 
-    double lD3 = 0; // lado 3 (caso do triangulo)
-    double al = 0;// altura do triangulo
-    double bs = 0;// base do triangulo//Pedro Henrique Sampaio da Silva :-:
+//Pedro Henrique Sampaio da Silva :-:
 import java.util.Scanner;
 public class alg {
 public static void main(String[] args) {
@@ -21,21 +12,23 @@ public static void main(String[] args) {
     double pR = 0;//perimetro
     double aR = 0;//area 
     double pI = 3.14;
-
+    boolean c = true;
     //inicio do programa
     System.out.print(" # Escolha a forma geométrica\n\n");
-    System.out.println("  1. Retângulo;\n  2. Círculo;\n  3. Quadrado;\n  4. Triângulo;\n");
+    System.out.println("  1. Retângulo;\n  2. Círculo;\n  3. Quadrado;\n  4. Triângulo;\n  5. Fechar Programa;");
 
-    //exibe o menu
-    System.out.print(" Insira a opção :");
+    //exibe o menu e inicia a repetição por while
+while( c == true){
+    System.out.print("\n\n Insira a opção: ");
     oP = sc.nextByte();
 
     switch (oP){
         case 1:{
             //calculo de Retângulo
+            System.out.println("\n Você escolheu a opção retângulo");
             System.out.print("\n  Digite a altura: ");
             lD1 = sc.nextDouble();
-            System.out.print("\n  Digite o comprimento: ");
+            System.out.print("  Digite o comprimento: ");
             lD2 = sc.nextDouble();
             aR = lD1 * lD2;
             pR = (lD1 * 2) + (lD2 * 2);
@@ -44,6 +37,7 @@ public static void main(String[] args) {
         }
         case 2:{
             //calculo do Circulo
+            System.out.println("\n Você escolheu a opção círculo");
             System.out.print("\n  Digite o raio do círculo: ");
             lD1 = sc.nextDouble();
             aR = lD1 * lD1 * pI;
@@ -53,6 +47,7 @@ public static void main(String[] args) {
         }
         case 3:{
             //calculo do Quadrado
+            System.out.println("\n Você escolheu a opção quadrado");
             System.out.print("\n  Digite o lado: ");
             lD1 = sc.nextDouble();
             aR = lD1 * lD1;
@@ -62,102 +57,37 @@ public static void main(String[] args) {
         }
         case 4:{
             //calculo do Triângulo
+            System.out.println("\n Você escolheu a opção triângulo");
             System.out.print("\n  Digite a altura: ");
             al = sc.nextDouble();
-            System.out.print("\n  Digite a base: ");
+            System.out.print("  Digite a base: ");
             bs = sc.nextDouble();
-            System.out.print("\n  Digite o lado 1: ");
+            System.out.print("  Digite o lado 1: ");
             lD1 = sc.nextDouble();
-            System.out.print("\n  Digite o lado 2: ");
+            System.out.print("  Digite o lado 2: ");
             lD2 = sc.nextDouble();
-            System.out.print("\n  Digite o lado 3: ");
+            System.out.print("  Digite o lado 3: ");
             lD3 = sc.nextDouble();
             aR = ((al * bs) / 2);
             pR = lD1 + lD2 + lD3;
-            System.out.printf("\n A área do triângulo é %,.2f e o perimetro é %,.1f ", aR, pR);
+            System.out.printf("\n  A área do triângulo é %,.2f e o perimetro é %,.1f ", aR, pR);
+            break;
+        }
+        case 5:{
+            System.out.println("\n  Fechando o programa . . .");
+            c = false;
             break;
         }
         default:{
             //define a opção incorreta
-            System.out.print("opção inválida");
+            System.out.print("  opção inválida");
             break;
         }
         
     }
-
+}
 
 
 sc.close();
 }
 }
-
-    double pR = 0;//perimetro
-    double aR = 0;//area 
-    double pI = 3.14;
-
-    System.out.print(" # Escolha a forma geométrica\n\n");
-    System.out.println("  1 . Retângulo;\n  2. Círculo;\n  3. Quadrado;\n  4. Triângulo;\n");
-    //exibe o menu
-    System.out.print(" Insira a opção :");
-    oP = sc.nextByte();
-
-    switch (oP){
-        case 1:{
-            //Retângulo
-            System.out.print("\n  Digite a altura: ");
-            lD1 = sc.nextInt();
-            System.out.print("\n  Digite o comprimento: ");
-            lD2 = sc.nextInt();
-            aR = lD1 * lD2;
-            pR = (lD1 * 2) + (lD2 * 2);
-            System.out.printf("\n a área do retângulo é %.2d e o perimetro é %.1d. ", aR, pR);
-            break;
-        }
-        case 2:{
-            //Circulo
-            System.out.print("\n  Digite o raio do circulo: ");
-            lD1 = sc.nextInt();
-            aR = lD1 * lD1 * (pI * 2);
-            pR = (pI * 2) * lD1;
-            System.out.printf("\n a área do circulo é %.2d e o perimetro é %.1d. ", aR, pR);
-            break;
-        }
-        case 3:{
-            //Quadrado
-            System.out.print("\n  Digite o lado: ");
-            lD1 = sc.nextInt();
-            aR = lD1 * lD1;
-            pR = lD1 * 4;
-            System.out.printf("\n a área do quadrado é %.2d e o perimetro é %.1d. ", aR, pR);
-            break;
-        }
-        case 4:{
-            //Triângulo
-            System.out.print("\n  Digite a altura: ");
-            al = sc.nextInt();
-            System.out.print("\n  Digite a base: ");
-            bs = sc.nextInt();
-            System.out.print("\n  Digite o lado 1: ");
-            lD1 = sc.nextDouble();
-            System.out.print("\n  Digite o lado 2: ");
-            lD2 = sc.nextDouble();
-            System.out.print("\n  Digite o lado 3: ");
-            lD3 = sc.nextDouble();
-            aR = ((al * bs) / 2);
-            pR = lD1 + lD2 + lD3;
-            System.out.printf("\n a área do retângulo é %.2d e o perimetro é %.1d. ", aR, pR);
-            break;
-        }
-        default:{
-            System.out.print("opção inválida");
-            break;
-        }
-        
-    }
-
-
-
-sc.close();
-}
-}
-
