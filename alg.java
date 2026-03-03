@@ -1,4 +1,3 @@
-
 //Pedro Henrique Sampaio da Silva :-:
 import java.util.Scanner;
 public class alg {
@@ -15,10 +14,10 @@ public static void main(String[] args) {
     boolean c = true;
     //inicio do programa
     System.out.print(" # Escolha a forma geométrica\n\n");
-    System.out.println("  1. Retângulo;\n  2. Círculo;\n  3. Quadrado;\n  4. Triângulo;\n  5. Fechar Programa;");
+    while(c){
+    System.out.println("\n  1. Retângulo;\n  2. Círculo;\n  3. Quadrado;\n  4. Triângulo;\n  5. Fechar Programa;");
+    //exibe o menu e inicia o while
 
-    //exibe o menu e inicia a repetição por while
-while(c){
     System.out.print("\n\n Insira a opção: ");
     oP = sc.nextByte();
 
@@ -32,7 +31,7 @@ while(c){
             ld2 = sc.nextDouble();
             ar = ld1 * ld2;
             pr = (ld1 * 2) + (ld2 * 2);
-            System.out.printf("\n A área do retângulo é %,.2f e o perimetro é %,.1f. ", ar, pr);
+            System.out.printf("\n A área do retângulo é %,.2f e o perimetro é %,.1f. \n", ar, pr);
             break;
         }
         case 2:{
@@ -42,7 +41,7 @@ while(c){
             ld1 = sc.nextDouble();
             ar = ld1 * ld1 * Math.PI;
             pr = (Math.PI * 2) * ld1;
-            System.out.printf("\n A área do círculo é %,.2f e o perimetro é %,.1f ", ar, pr);
+            System.out.printf("\n A área do círculo é %,.2f e o perimetro é %,.1f. \n", ar, pr);
             break;
         }
         case 3:{
@@ -52,7 +51,7 @@ while(c){
             ld1 = sc.nextDouble();
             ar = ld1 * ld1;
             pr = ld1 * 4;
-            System.out.printf("\n A área do quadrado é %,.2f e o perimetro é %,.1f. ", ar, pr);
+            System.out.printf("\n A área do quadrado é %,.2f e o perimetro é %,.1f. \n", ar, pr);
             break;
         }
         case 4:{
@@ -70,7 +69,7 @@ while(c){
             ld3 = sc.nextDouble();
             ar = ((al * bs) / 2);
             pr = ld1 + ld2 + ld3;
-            System.out.printf("\n  A área do triângulo é %,.2f e o perimetro é %,.1f ", ar, pr);
+            System.out.printf("\n  A área do triângulo é %,.2f e o perimetro é %,.1f \n", ar, pr);
             break;
         }
         case 5:{
@@ -80,7 +79,7 @@ while(c){
         }
         default:{
             //define a opção incorreta
-            System.out.print("  opção inválida");
+            System.out.print("  opção inválida\n");
             break;
         }
         
