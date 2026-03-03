@@ -1,0 +1,27 @@
+Trainee	Não resolve completamente os objetivos das etapas propostas.
+
+Pode apresentar:
+Cálculos incorretos de área ou perímetro
+Erros de lógica na estrutura condicional
+Dificuldade em organizar o código em métodos
+Implementação incompleta das classes
+Demonstra tentativa, mas ainda apresenta fragilidade na consolidação dos conceitos.
+
+Programador Júnior	Resolve corretamente os objetivos das etapas.
+
+O sistema:
+Calcula área e perímetro corretamente
+Implementa métodos quando solicitado
+Cria e utiliza classes adequadamente
+Permite adicionar novas formas sem quebrar o funcionamento básico
+Pode apresentar pequenas falhas de organização ou repetição de código, mas atende aos requisitos funcionais propostos.
+
+Programador Sênior	Resolve os objetivos e demonstra maturidade técnica.
+
+Além de funcionar corretamente, o projeto apresenta:
+Código bem formatado e legível
+Nomes claros e coerentes para variáveis e métodos
+Boa separação de responsabilidades entre classes
+Estrutura preparada para expansão futura
+Redução de repetição de código
+Demonstra entendimento não apenas do funcionamento, mas da qualidade estrutural do software.
