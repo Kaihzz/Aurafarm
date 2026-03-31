@@ -1,6 +1,27 @@
 //Pedro Henrique Sampaio da Silva 
 import java.util.Scanner;
-public class alg {
+public class aura {
+    public static double calcAr (double al, double bs){
+        return al * bs;
+    }
+    public static double calcCr (double ld1){
+        return (ld1 * ld1) * Math.PI;
+    }
+    public static double calcT(double al, double bs){
+        return (al * bs) / 2;
+    }
+    public static double prR(double al, double bs){
+        return (al * 2) + (bs * 2);
+    }
+    public static double prQ(double ld1){
+        return ld1 * 4;
+    }
+    public static double prC(double ld1){
+        return (2 * Math.PI) * ld1; 
+    }
+    public static double prT(double ld1, double ld2, double ld3){
+        return ld1 + ld2 + ld3;
+    }
 public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);//inicia Scanner
     int qtd = 0; //quantidade de formas geométricas
@@ -13,8 +34,8 @@ public static void main(String[] args) {
     double pr = 0;//perimetro
     double ar = 0;//area
     int i = 0;//contador
-    double[] arR = new double[i];//array para armazenar as áreas das formas geométricas
-    double[] prR = new double[i];//array para armazenar os perímetros dos formas geométricas
+    double arcomp = 0;
+    double prcomp = 0;
     //inicio do programa
     System.out.println("==== Calculadora de área e perímetro de formas geométricas ====");
     System.out.println("\n==============================================");
@@ -34,13 +55,13 @@ public static void main(String[] args) {
             //calculo de Retângulo
             System.out.println("\n Você escolheu a opção retângulo");
             System.out.print("\n  Digite a altura: ");
-            ld1 = sc.nextDouble();//insire o valor da altura
+            al = sc.nextDouble();//insire o valor da altura
             System.out.print("  Digite o comprimento: ");
-            ld2 = sc.nextDouble();//insere o valor do comprimento
-            ar = ld1 * ld2;
-            arR[i] = ar;
-            pr = (ld1 * 2) + (ld2 * 2);
-            prR[i] = pr;
+            bs = sc.nextDouble();//insere o valor do comprimento
+            ar = calcAr(al, bs);
+            arcomp = ar + arcomp;
+            pr = prR(al, bs);
+            prcomp = pr + prcomp;
             System.out.printf("\n A área do retângulo é %,.2f e o perimetro é %,.1f. \n", ar, pr);
             break;
         }
@@ -49,10 +70,10 @@ public static void main(String[] args) {
             System.out.println("\n Você escolheu a opção círculo");
             System.out.print("\n  Digite o raio do círculo: ");
             ld1 = sc.nextDouble();//insere o valor do raio
-            ar = ld1 * ld1 * Math.PI;
-            arR[i] = ar;
-            pr = (Math.PI * 2) * ld1;
-            prR[i] = pr;
+            ar = calcCr(ld1);
+            arcomp = ar + arcomp;
+            pr = prC(ld1);
+            prcomp = pr + prcomp;
             System.out.printf("\n A área do círculo é %,.2f e o perimetro é %,.1f. \n", ar, pr);
             break;
         }
@@ -61,10 +82,12 @@ public static void main(String[] args) {
             System.out.println("\n Você escolheu a opção quadrado");
             System.out.print("\n  Digite o lado: ");
             ld1 = sc.nextDouble();//insere o valor do lado
-            ar = ld1 * ld1;
-            arR[i] = ar;
-            pr = ld1 * 4;
-            prR[i] = pr;
+            al = ld1;
+            bs = ld1;
+            ar = calcAr(al, bs);
+            arcomp = ar + arcomp;
+            pr = prQ(ld1);
+            prcomp = pr + prcomp;
             System.out.printf("\n A área do quadrado é %,.2f e o perimetro é %,.1f. \n", ar, pr);
             break;
         }
@@ -81,10 +104,10 @@ public static void main(String[] args) {
             ld2 = sc.nextDouble();//insere o valor do lado 2
             System.out.print("  Digite o lado 3: ");
             ld3 = sc.nextDouble();//insere o valor do lado 3
-            ar = ((al * bs) / 2);
-            arR[i] = ar;
-            pr = ld1 + ld2 + ld3;
-            prR[i] = pr;
+            ar = calcT(al, bs);
+            arcomp = ar + arcomp;
+            pr = prT(ld1, ld2, ld3);
+            prcomp = pr + prcomp;
             System.out.printf("\n  A área do triângulo é %,.2f e o perimetro é %,.1f \n", ar, pr);
             break;
         }
@@ -102,10 +125,9 @@ public static void main(String[] args) {
         
     }//eSwitch
 }//Efor
-    for(i = 0; i < qtd; i++){
-        System.out.printf("\n  Forma geométrica %d: Área = %,.2f | Perímetro = %,.1f", (i + 1), arR[i], prR[i]);
+        System.out.printf("\n  Forma geométrica : Área = %,.2f | Perímetro = %,.1f",arcomp, prcomp);
 
-    }
+    
     System.out.println("\n  Programa finalizado com sucesso!");
 
 sc.close();
