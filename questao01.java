@@ -4,20 +4,24 @@ import java.util.Scanner;
 public class questao01 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        
+        //essa parte pra ler números no formato americano, usando ponto em vez de vírgula.
+        // pq as notas sao marcadas com . nao com ,
+        
         sc.useLocale(java.util.Locale.US);
 
         //Digitacao para colocar os conteduso
         // as string para adiciona o notaString e as outras,dps ler o teclado
         // os system pra coloca o texto com ln pra quebra linha
         
-        System.out.println("*** Começo da entrevista\n");
-
+        System.out.println("*** Começo da entrevista\n");     
+        //pega a nota do teclado e armazena ela em NOTASTRING e ler '
         System.out.print("Qual foi sua nota..? ");
         String notaString = sc.nextLine();
-
+        //pega o conseito digitado e guarda  em COnceitostring e ler 
         System.out.print("Qual foi o conceito? ");
         String conceitoString = sc.nextLine();
-
+        
         System.out.println("\n*** Fim da entrevista\n");
         
        
